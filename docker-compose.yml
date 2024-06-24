@@ -1,0 +1,52 @@
+services:
+  evmotors:
+    build: ./evmotors
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=mysql+pymysql://evmotorsusr:evmotors123@db:3306/evmotors
+    depends_on:
+      - db
+      - insurance
+      - loan
+    networks:
+      - mynetwork
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - evmotors
+    networks:
+      - mynetwork
+
+  insurance:
+    build: ./insurance
+    ports:
+      - "5001:5001"
+    networks:
+      - mynetwork
+
+  loan:
+    build: ./loan
+    ports:
+      - "5002:5002"
+    networks:
+      - mynetwork
+
+  db:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: evmotors123
+      MYSQL_DATABASE: evmotors
+      MYSQL_USER: evmotorsusr
+      MYSQL_PASSWORD: evmotors123
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
