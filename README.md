@@ -42,14 +42,6 @@ Welcome to the EVMotors project repository! This platform facilitates insurance 
 - **microservices/**: Directory for microservices such as insurance and loan calculations.
 - **docker-compose.yml**: Configuration file for Docker Compose to orchestrate the services.
 
-### Contributions
-
-Contributions are welcome! Feel free to open an issue for suggestions or problems encountered, or submit a pull request with improvements.
-
-### Team
-
-Developed by Your Name and Collaborator's Name.
-
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
