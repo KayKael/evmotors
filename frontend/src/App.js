@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import EVMotors from './pages/EVMotors';
-import CarSelectionPage from './pages/CarSelectionPage';
+import CarInsurancePage from './pages/CarInsurancePage';
 import LoanCalculationPage from './pages/LoanCalculationPage';
+
+
 
 function App() {
   return (
@@ -11,8 +13,8 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<EVMotors />} />
-          <Route path="/car-selection" element={<CarSelectionPage />} />
+          <Route path="/EVMotors" element={<EVMotors />} />
+          <Route path="/insurance-calculation" element={<CarInsurancePage />} />
           <Route path="/loan-calculation" element={<LoanCalculationPage />} />
         </Routes>
       </div>

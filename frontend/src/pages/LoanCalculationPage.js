@@ -1,12 +1,13 @@
 import React from 'react';
 import LoanCalculation from '../components/LoanCalculation';
 
-function LoanCalculationPage() {
+const LoanCalculationPage = () => {
   return (
-    <div>
-      <LoanCalculation carId={1} /> {/* Replace with actual carId logic */}
+    <div className="container">
+      <h1>Loan Calculation</h1>
+      <LoanCalculation />
     </div>
   );
-}
+};
 
 export default LoanCalculationPage;
