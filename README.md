@@ -26,11 +26,12 @@ Welcome to the EVMotors project repository! This platform facilitates insurance 
    ```bash
    git clone https://github.com/your-username/evmotors.git
    cd evmotors
+   ```
 
 2. **Start the development environment using Docker Compose:**
   ```bash
   docker-compose up --build
-
+  ```
 3. **Access the web application:**
   Open your web browser and go to http://localhost:3000/EVMotors.
 
